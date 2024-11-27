@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GH Arcade</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="./Assets/img/icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="https://www.ssega.com/">
+        <img src="./Assets/img/Sega-logo.png" class="w3-bar-item  w3-wide logo">
+      </a>
+      
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <button class="tablinks w3-bar-item w3-button" onclick="openCity(event, 'Play')" id="defaultOpen"><i class="fa fa-play"></i> Play</button>
+        <button class="tablinks w3-bar-item w3-button" onclick="openCity(event, 'About')"><i class="fa fa-exclamation"></i> About</button>
+        <button class="tablinks w3-bar-item w3-button" onclick="openCity(event, 'Help')"><i class="fa fa-question"></i>Help</button>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+    style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#Play" onclick="openCity(event, 'Play')" class="w3-bar-item w3-button">Play</a>
+    <a href="#About" onclick="openCity(event, 'About')" class="w3-bar-item w3-button">About</a>
+    <a href="#Help" onclick="openCity(event, 'Help')" class="w3-bar-item w3-button">Help</a>
+  </nav>
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+
+    <div id="Play" class="tabcontent">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">GH <span id="segaid">SEGA</span> Arcade</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">GH Arcade</span><br>
+        <span class="w3-large">Play your favorite sega games and fell nostalgic as much as you like !!!</span>
+        <p><button onclick="document.getElementById('play').style.display='block'" class="button"><span>Start Playing
+            </span></button></p>
+      </div>
+
+      <!-- Menu Modal -->
+      <div id="play" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+
+          <div class="w3-container w3-black w3-display-container">
+            <span onclick="document.getElementById('play').style.display='none'"class="w3-button w3-display-topright w3-large">x</span>
+            <h1 class="center">Ghazal Sega Games</h1>
+            <input type="text" id="searchInput" placeholder="Search games...">
+          </div>
+
+          <div class="center w3-container">
+            <div class="card-container">
+              <a href="https://www.ssega.com/play/a-generic-sonic-1/3871" class="card">
+                <img src="./Assets/img/sonic.jpg" alt="Sonic">
+                <h3>Sonic</h3>
+                <h4>سونیک</h4>
+              </a>
+              <a href="https://www.ssega.com/play/tiny-toon-adventures-busters-hidden-treasure/1719" class="card">
+                <img src="./Assets/img/tiny toon.jpg" alt="Tiny Toon">
+                <h3>Tiny Toon</h3>
+                <h4>خرگوشه</h4>
+              </a>
+              <a href="https://www.ssega.com/play/flicky/653" class="card">
+                <img src="./Assets/img/flicky.jpg" alt="Flicky">
+                <h3>Flicky</h3>
+                <h4>جوجه هه</h4>
+              </a>
+              <a href="https://www.ssega.com/play/home-alone-2-lost-in-newyork/793" class="card">
+                <img src="./Assets/img/HomeAlone2.png" alt="Home Alone 2">
+                <h3>Home Alone 2</h3>
+                <h4>تنهادرخانه</h4>
+              </a>
+              <a href="https://www.ssega.com/play/rambo-iii/1390" class="card">
+                <img src="./Assets/img/rambo3.jpg" alt="Rambo 3">
+                <h3>Rambo 3</h3>
+                <h4>رامبو</h4>
+              </a>
+              <a href="https://www.ssega.com/play/shadow-dancer/1494" class="card">
+                <img src="./Assets/img/shadow dancer.png" alt="Shadow Dancer">
+                <h3>Shadow Dancer</h3>
+                <h4>مرده و سگش</h4>
+              </a>
+              <a href="https://www.ssega.com/play/super-volleyball/1642" class="card">
+                <img src="./Assets/img/SuperVolleyBall.png" alt="Super Volleyball">
+                <h3>Super Volleyball</h3>
+                <h4>والیبال</h4>
+              </a>
+              <a href="https://www.ssega.com/play/james-pond-3-operation-starfish/844" class="card">
+                <img src="./Assets/img/James_Pond_3.jpg" alt="James Pond 3">
+                <h3>James Pond 3</h3>
+                <h4>موزیه</h4>
+              </a>
+              <a href="https://www.ssega.com/play/streets-of-rage/1606" class="card">
+                <img src="./Assets/img/Sor_title.png" alt="Streets of Rage">
+                <h3>Streets of Rage</h3>
+                <h4>شورش در شهر</h4>
+              </a>
+              <a href="https://www.ssega.com/play/sunset-riders/1622" class="card">
+                <img src="./Assets/img/SunsetRiders.png" alt="Sunset Riders">
+                <h3>Sunset Riders</h3>
+                <h4>لوک خوش شانس</h4>
+              </a>
+              <a href="https://www.ssega.com/play/robocop-3/1435" class="card">
+                <img src="./Assets/img/Robocop3.jpg" alt="Robocop 3">
+                <h3>Robocop 3</h3>
+                <h4>پلیس آهنی</h4>
+              </a>
+              <a href="https://www.ssega.com/play/wwf-wrestlemania/1903" class="card">
+                <img src="./Assets/img/wwf-wrestlemania.jpg" alt="Wwf-Wrestlemania">
+                <h3>Wwf Wrestlemania</h3>
+                <h4>کشتی کج</h4>
+              </a>
+              <a href="https://arcadespot.com/game/disneys-tarzan/" class="card">
+                <img src="./Assets/img/tarzan.jpg" alt="Disney's Tarzan">
+                <h3>Disney's Tarzan</h3>
+                <h4>تارزان</h4>
+              </a>
+              <a href="https://arcadespot.com/game/the-flintstones/" class="card">
+                <img src="./Assets/img/theflintstones.jpg" alt="The Flintstones">
+                <h3>The Flintstones</h3>
+                <h4>عصر حجر</h4>
+              </a>
+              <a href="https://arcadespot.com/game/the-jungle-book-sega/" class="card">
+                <img src="./Assets/img/JungleBook.png" alt="Jungle Book">
+                <h3>Jungle Book</h3>
+                <h4>کتاب جنگل</h4>
+              </a>
+              <a href="" class="card">
+                <img src="./Assets/img/Sega-logo.png" alt="SEGA Game">
+                <h3>SEGA Game</h3>
+                <h4>مامانش میاد سر قبرش</h4>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="About" class="tabcontent">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">About This Website</span><br>
+        <span class="w3-large">
+          Welcome to GH Arcade <br>
+          This is a private website for my sister personal intertainment <br>
+          GH Arcade is a simple dashboard for quick accessing to some of  <br>
+          my sister's favorite games on sega console through internet <br>
+          I hope i can bring smile on your face when you are playing <br>         
+          Enjoy Sister :)
+        </span>
+      </div>
+    </div>
+
+    <div id="Help" class="tabcontent">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">Help</span><br>
+        <span class="w3-large">
+          <h3>How to start :</h3>
+          After hitting play, choose the game you want to play from your favorite games <br>
+          list and after clicking on your choosen game, the game will began <br>
+          <h3>Controlls :</h3>
+          Enter = Start <br>
+          C = Jump <br>
+          X = Hit <br>
+          Z = Power <br>
+        </span>
+      </div>
+    </div>
+
+
+
+    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+      <p>Createrd by Reza</p>
+    </div>
+  </header>
+
+</body>
+<script src="./Assets/js/script.js"></script>
+
+</html>
